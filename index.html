@@ -6,61 +6,46 @@
     	<meta name="description" content="using plugins JS">
     	<meta name="author" content="Joanna Michalak">
     	<meta name="keywods" content="plugins, JS">
-    	<title>The most beautiful cities in Poland</title>
+    	<title>The most beautiful cities in the world</title>
 		<link rel="stylesheet" type="text/css" href="vendor/normalize.css">
 		<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
-        <div class="carousel" id="carousel-main">
-        </div>
-        <div class="progress-bar"></div>
-        <div class="button-group">
-            <button class="reset-btn" data-selector="#carousel-cell-gdansk">Reset</button>
-        </div>
-        <div id="page-wrapper" class="container">
-            <p id="infos"></p>
-        </div>
-        <script>
-            var galleryData = [
-                {
-                    image: 'images/gdansk.jpg',
-                    title: 'Gdańsk',
-                    description: '<p>Lorem ipsum.</p> <p>Dolor sit.</p> <span id="carousel-cell-gdansk"></span>'
-                },
-                {
-                    image: 'images/katowice.jpg',
-                    title: 'Katowice',
-                    description: '<p>Lorem ipsum.</p> <p>Dolor sit.</p>'
-                },
-                {
-                    image: 'images/krakow.jpg',
-                    title: 'Kraków',
-                    description: "<p>Lorem ipsum.</p> <p>Dolor sit.</p>"
-                },
-                {
-                    image: 'images/rybnik.jpg',
-                    title: 'Rybnik',
-                    description: "<p>Lorem ipsum.</p> <p>Dolor sit.</p>"
-                },
-                {
-                    image: 'images/wroclaw.jpg',
-                    title: 'Wrocław',
-                    description: "<p>Lorem ipsum.</p> <p>Dolor sit.</p>"
-                }
-            ];
-        </script>
-        <script id="gallery-template" type="x-tmpl-mustache">
-			<div class="template-container">
-				<h3>{{ title }}</h3>
-				<div class="carousel-cell" style="background-image: url( {{ image }} );"></div>
-				{{{ description }}}
-			</div>
-		</script>
+		<body>
+    <p class="hashs-group">
+        <a href="#carousel-cell1">New York</a>
+        <a href="#carousel-cell2">Dubai</a>
+        <a href="#carousel-cell3">Rome</a>
+        <a href="#carousel-cell4">Cracow</a>
+        <a href="#carousel-cell5">Prague</a>
+    </p>
 
-        <script src="vendor/flickity.pkgd.min.js"></script>
-        <script src="vendor/hash.js"></script>
-        <script src="vendor/mustache.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+    <div class="button-group">
+        <button class="button-restart">Restart</button>
+    </div>
+
+    <div class="main-carousel" data-flickity='{ "hash": true }'>
+        <div style="background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/0GZ83DHBCE.jpg)" class="carousel-cell"
+            id="carousel-cell1">
+            <div class="container">New York</div>
+        </div>
+        <div style="background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/JEXZJLOR8W.jpg)" class="carousel-cell"
+            id="carousel-cell2">
+            <div class="container">Dubai</div>
+        </div>
+        <div style="background-image: url(https://images.pexels.com/photos/56886/vittorio-emanuele-monument-rome-rome-palace-altare-della-patria-56886.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)" class="carousel-cell" id="carousel-cell3">
+            <div class="container">Rome</div>
+        </div>
+        <div style="background-image: url(https://images.pexels.com/photos/46273/pexels-photo-46273.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)" class="carousel-cell" id="carousel-cell4">
+            <div class="container">Cracow</div>
+        </div>
+        <div style="background-image: url(https://images.pexels.com/photos/61381/pexels-photo-61381.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)" class="carousel-cell" id="carousel-cell5">
+            <div class="container">Prague</div>
+        </div>
+    </div>
+    <div class="progress-bar"></div>
+
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>
