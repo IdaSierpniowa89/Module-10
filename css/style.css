@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c1acd6;
+}
+
+.container {
+  color: grey;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.carousel {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-cell {
+  background-size: cover;
+  border-radius: 5px;
+  height: 350px;
+  margin-right: 10px;
+  width: 600px;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.progress-bar {
+  height: 15px;
+  width: 0;
+  background: #643ade;
+}
+
+.reset-btn {
+  background-color: rgb(132, 36, 152);
+  color: rgb(218, 166, 216);
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 5px;
+}
+.template-container {
+  text-align: center;
+}
+#infos {
+  color: grey;
+}
